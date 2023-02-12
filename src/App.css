@@ -4,6 +4,9 @@
   margin: 0px;
   box-sizing: border-box;
 }
+.App {
+  display: flex;
+}
 h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -23,7 +26,7 @@ h3 {
   color: rgb(208, 208, 208);
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0px;
 }
