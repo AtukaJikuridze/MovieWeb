@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 import LeftsideNav from "./components/LeftsideNav/LeftsideNav";
 import RightsideNav from "./components/RightsideNav/RightsideNav";
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <LeftsideNav />
-      <Header />
+      <Main />
       <RightsideNav watchList={watchList} continueWatching={continueWatching} />
     </div>
   );

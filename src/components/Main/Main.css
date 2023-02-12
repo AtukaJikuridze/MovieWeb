@@ -1,0 +1,90 @@
+main {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  background-image: url("../../assets/images/Adam.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 720px;
+  position: relative;
+  overflow-y: hidden;
+}
+header .blur {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+header .blur2 {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  background: transparent;
+  padding: 32px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+.blur {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.header-text {
+  position: relative;
+  padding: 100px;
+}
+.header-text h1 {
+  width: 500px;
+  line-height: 60px;
+}
+.header-text .flex {
+  display: flex;
+}
+.header-text .flex p {
+  width: 82px;
+  height: 26px;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 0%);
+  -webkit-backdrop-filter: blur(11px);
+          backdrop-filter: blur(11px);
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px 8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header-text button {
+  width: 170px;
+  height: 48px;
+  background: rgb(248, 36, 47);
+  border-radius: 40px;
+  border: 0px;
+  color: #fff;
+  display: flex;
+  letter-spacing: 0.1em;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 40px 12px 40px;
+  margin-top: 10px;
+  cursor: pointer;
+}/*# sourceMappingURL=Main.css.map */
