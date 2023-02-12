@@ -2,7 +2,9 @@
   background: rgb(33, 32, 30);
   width: 270px;
   padding: 24px 32px;
-  height: 100vh;
+  .leftside-nav-fixed {
+    position: fixed;
+  }
 
   .LeftNavLink {
     cursor: pointer;
@@ -14,6 +16,7 @@
     margin-bottom: 40px;
     h3 {
       transition: 0.3s;
+      width: 100%;
     }
     h3:hover {
       color: #fff;
