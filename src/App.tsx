@@ -1,25 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import axios from "axios";
 import Main from "./components/Main/Main";
 import LeftsideNav from "./components/LeftsideNav/LeftsideNav";
 import RightsideNav from "./components/RightsideNav/RightsideNav";
 import Movie from "./components/Movie/Movie";
+import { allMovieAPI } from "./AllMovie";
 function App() {
+  const navigate = useNavigate();
   const [allMovie, setAllMovie] = useState([]);
   const [continueWatching, setContinueWatchList] = useState([]);
   const [watchList, setWatchList] = useState([]);
-
   useEffect(() => {
-    const MoviePage1 = async () => {
-      const response = await axios.get(
-        "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1&fbclid=IwAR1zilEssAROuHxlSvRY-N6pt936Y8dP3lKlVsKdCjrxRlmRxqGqAszh0zA"
-      );
-      setAllMovie(response.data.results);
-    };
-
-    MoviePage1();
+    setAllMovie(allMovieAPI.results);
   }, []);
 
   return (
@@ -37,7 +31,10 @@ function App() {
             />
           }
         />
-        <Route path="movies/:id" element={<Movie allMovies={allMovie} />} />
+        <Route
+          path="movies/:id"
+          element={<Movie navigate={navigate} allMovies={allMovie} />}
+        />
       </Routes>
 
       <RightsideNav

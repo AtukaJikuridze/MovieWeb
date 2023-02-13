@@ -1,0 +1,41 @@
+.suggest-movies {
+  display: flex;
+  gap: 10px;
+}
+.suggest-movies .suggest-movie {
+  height: 190px;
+  width: 25%;
+}
+.suggest-movies .suggest-movie .suggest-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.suggest-movies .suggest-movie .suggest-img:hover img {
+  filter: brightness(20%);
+}
+.suggest-movies .suggest-movie .suggest-img:hover button {
+  opacity: 1;
+}
+.suggest-movies .suggest-movie button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 36px;
+  border: 1px solid white;
+  color: #fff;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.suggest-movies .suggest-movie img {
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}/*# sourceMappingURL=SuggestMovies.css.map */

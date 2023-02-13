@@ -1,10 +1,43 @@
 .movie-main {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
+  padding: 50px 150px;
+}
+.movie-main h1 {
+  color: rgb(58, 58, 58);
+  margin: 90px 0px;
+  font-weight: 400;
+}
+.movie-main .video-main {
+  width: 100%;
 }
 .movie-main video {
-  width: 80%;
+  width: 100%;
   height: 50%;
+}
+.movie-main .movie-info {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+.movie-main .movie-info h2 {
+  color: black;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+}
+.movie-main .movie-info p {
+  margin: 20px 0px;
+  color: rgb(28, 28, 28);
+  font-size: 13px;
+}
+.movie-main .movie-info h4 {
+  color: black;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.movie-main .movie-info .movie-img img {
+  width: 200px;
+  height: 300px;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 5px;
 }/*# sourceMappingURL=Movie.css.map */

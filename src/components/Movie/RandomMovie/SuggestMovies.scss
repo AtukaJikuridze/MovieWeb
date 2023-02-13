@@ -1,0 +1,44 @@
+.suggest-movies {
+  display: flex;
+  gap: 10px;
+  .suggest-movie {
+    height: 190px;
+    width: 25%;
+    .suggest-img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .suggest-img:hover {
+      img {
+        filter: brightness(20%);
+      }
+
+      button {
+        opacity: 1;
+      }
+    }
+    button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 36px;
+      border: 1px solid white;
+      color: #fff;
+      background-color: transparent;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      border-radius: 10px;
+      opacity: 0;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      transition: 0.4s;
+    }
+  }
+}

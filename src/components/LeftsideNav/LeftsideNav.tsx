@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import LeftNavLink from "./LeftNavLink";
+import { useNavigate } from "react-router-dom";
 import {
   BsSearch,
   BsClipboard,
@@ -10,6 +11,7 @@ import {
 import "./LeftsideNav.css";
 
 export default function LeftsideNav() {
+  const navigate = useNavigate();
   const search = (e: any) => {
     window.scrollTo(0, 500);
   };
@@ -17,7 +19,12 @@ export default function LeftsideNav() {
     <div className="leftsidenav-main">
       <div className="leftside-nav-fixed">
         <div className="leftside-logo">
-          <img src={require("../../assets/images/Logo.png")} alt="" />
+          <img
+            style={{ cursor: "pointer" }}
+            onClick={() => navigate("/")}
+            src={require("../../assets/images/Logo.png")}
+            alt=""
+          />
         </div>
 
         <p className="leftside-category-name">MENU</p>
