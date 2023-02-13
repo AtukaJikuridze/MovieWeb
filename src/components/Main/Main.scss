@@ -1,6 +1,28 @@
 main {
   width: 100%;
   background: rgb(25, 24, 23);
+  h1,
+  input {
+    display: inline-block;
+  }
+  input {
+    width: 400px;
+    height: 45px;
+    transform: translateY(-5px);
+    border: 1px solid white;
+    padding: 0px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  input::placeholder {
+    color: #e2e0e0;
+  }
 }
 header {
   width: 100%;
@@ -94,6 +116,7 @@ nav {
 .allMovie {
   display: flex;
   flex-wrap: wrap;
+
   padding: 20px 20px 150px 20px;
   .movie {
     width: 23%;

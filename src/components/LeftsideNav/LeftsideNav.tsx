@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LeftNavLink from "./LeftNavLink";
 import {
   BsSearch,
@@ -8,15 +8,25 @@ import {
   BsNut,
 } from "react-icons/bs";
 import "./LeftsideNav.css";
+
 export default function LeftsideNav() {
+  const search = (e: any) => {
+    window.scrollTo(0, 500);
+  };
   return (
     <div className="leftsidenav-main">
       <div className="leftside-nav-fixed">
         <div className="leftside-logo">
           <img src={require("../../assets/images/Logo.png")} alt="" />
         </div>
+
         <p className="leftside-category-name">MENU</p>
-        <LeftNavLink icon={BsSearch} title="Search" />
+        <LeftNavLink
+          onClick={(e: any) => search(e)}
+          icon={BsSearch}
+          title="Search"
+        />
+
         <LeftNavLink icon={BsClipboard} title="Watchlist" />
         <LeftNavLink icon={BsCalendarCheck} title="Coming soon" />
         <p className="leftside-category-name">SOCIAL</p>

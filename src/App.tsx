@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <LeftsideNav /> */}
+      <LeftsideNav />
 
       <Routes>
         <Route
@@ -37,14 +37,14 @@ function App() {
             />
           }
         />
-        <Route path="movies/:id" element={<Movie />} />
+        <Route path="movies/:id" element={<Movie allMovies={allMovie} />} />
       </Routes>
 
-      {/* <RightsideNav
+      <RightsideNav
         allMovie={allMovie}
         watchList={watchList}
         continueWatching={continueWatching}
-      /> */}
+      />
     </div>
   );
 }

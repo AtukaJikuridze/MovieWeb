@@ -1,16 +1,19 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "./Movie.css";
+import { MovieID } from "../MovieID";
 
-export default function Movie() {
+interface MovieInterface {
+  allMovies: Array<any>;
+}
+
+export default function Movie(props: MovieInterface) {
   const params = useParams();
-  {
-    console.log(params.id);
-  }
-
+  const correctMovie = MovieID.find((e) => e.id === Number(params.id));
+  console.log(correctMovie);
   return (
-    <div>
-      {String(params.id)}
-      <h1 style={{ color: "red" }}>Movie {JSON.stringify(params.id)}</h1>
+    <div className="movie-main">
+      <video src={correctMovie?.url} controls />
     </div>
   );
 }

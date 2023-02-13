@@ -2,6 +2,31 @@ main {
   width: 100%;
   background: rgb(25, 24, 23);
 }
+main h1,
+main input {
+  display: inline-block;
+}
+main input {
+  width: 400px;
+  height: 45px;
+  transform: translateY(-5px);
+  border: 1px solid white;
+  padding: 0px 20px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+main h1 {
+  font-size: 35px;
+}
+main input::-moz-placeholder {
+  color: #e2e0e0;
+}
+main input::placeholder {
+  color: #e2e0e0;
+}
 
 header {
   width: 100%;
