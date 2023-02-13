@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MovieWeb/static/css/main.21b26794.css",
+    "main.js": "/MovieWeb/static/js/main.c9db678a.js",
+    "static/js/787.80ff975f.chunk.js": "/MovieWeb/static/js/787.80ff975f.chunk.js",
+    "static/media/Adam.webp": "/MovieWeb/static/media/Adam.6b945ebf1e4196112511.webp",
+    "static/media/Blur.png": "/MovieWeb/static/media/Blur.962befa0952fe2d13b1c.png",
+    "static/media/MovieSonic.png": "/MovieWeb/static/media/MovieSonic.403c0d05a6ab408caca6.png",
+    "static/media/Venom.png": "/MovieWeb/static/media/Venom.baa3593c9bdfe3bd60a6.png",
+    "static/media/Dota.png": "/MovieWeb/static/media/Dota.9334f8413fe034b78dbe.png",
+    "static/media/MovieOrphan.png": "/MovieWeb/static/media/MovieOrphan.0c88c62f30fea015834c.png",
+    "index.html": "/MovieWeb/index.html",
+    "main.21b26794.css.map": "/MovieWeb/static/css/main.21b26794.css.map",
+    "main.c9db678a.js.map": "/MovieWeb/static/js/main.c9db678a.js.map",
+    "787.80ff975f.chunk.js.map": "/MovieWeb/static/js/787.80ff975f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21b26794.css",
+    "static/js/main.c9db678a.js"
+  ]
+}
