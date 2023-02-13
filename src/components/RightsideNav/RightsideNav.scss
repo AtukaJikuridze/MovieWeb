@@ -2,6 +2,16 @@
   width: 391px;
   background: rgb(33, 32, 30);
   padding: 32px;
+
+  .nav-overflow {
+    height: 100vh;
+    overflow-y: scroll;
+    position: fixed;
+    /* width */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+  }
   .rightnav-header {
     margin-bottom: 40px;
     display: flex;
@@ -28,7 +38,12 @@
   margin: 50px 0px;
 }
 .RightsideCard {
-  margin-top: 30px;
+  img {
+    width: 72px;
+    height: 74px;
+  }
+  margin-top: 15px;
+  padding-bottom: 15px;
   display: flex;
   gap: 10px;
 }

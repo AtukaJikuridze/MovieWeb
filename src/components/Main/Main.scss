@@ -1,5 +1,6 @@
 main {
   width: 100%;
+  background: rgb(25, 24, 23);
 }
 header {
   width: 100%;
@@ -87,5 +88,82 @@ nav {
     padding: 12px 40px 12px 40px;
     margin-top: 10px;
     cursor: pointer;
+  }
+}
+
+.allMovie {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 20px 150px 20px;
+  .movie {
+    width: 23%;
+    margin: auto;
+    margin-bottom: 30px;
+    position: relative;
+    height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+  }
+}
+.allMovie {
+  .movie-info {
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: absolute;
+    width: 100%;
+    background-color: #050505;
+    left: 30px;
+    top: -10px;
+    z-index: 1;
+    padding: 20px;
+    transition: 0.4s;
+  }
+  .movie:hover {
+    .movie-info {
+      opacity: 1;
+      left: 0px;
+    }
+  }
+
+  .movie-text {
+    button {
+      width: 100%;
+      height: 30px;
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid grey;
+      outline: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+      p {
+        color: #fff;
+      }
+    }
+    h2:nth-child(1) {
+      color: #fff;
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px grey solid;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+    h2 {
+      margin-top: 20px;
+
+      color: grey;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #7f7f7f;
+    }
   }
 }

@@ -3,10 +3,14 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 .App {
   display: flex;
   height: 100%;
+}
+#root {
+  overflow: hidden;
 }
 h1 {
   font-family: "Poppins", sans-serif;
@@ -14,6 +18,9 @@ h1 {
   color: #fff;
   line-height: 40px;
   font-size: 40px;
+}
+img {
+  object-fit: cover;
 }
 h2,
 a {
