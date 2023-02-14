@@ -2,6 +2,7 @@
   width: 391px;
   background: rgb(33, 32, 30);
   padding: 32px;
+  transition: 0.8s;
 }
 .RightSideNav .nav-overflow {
   height: 100vh;
@@ -46,4 +47,38 @@
 .RightsideCard img {
   width: 72px;
   height: 74px;
+}
+
+@media screen and (max-width: 1400px) {
+  .RightSideNav {
+    z-index: 111;
+    padding: 30px 15px;
+    position: fixed;
+    transform: translateX(100%);
+    right: 0px;
+    height: 100%;
+    width: 200px;
+  }
+  .RightSideNav .rightnav-header {
+    display: block;
+    align-items: start;
+    gap: 20px;
+  }
+  .RightSideNav .rightnav-header svg {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .RightSideNav .RightsideCard h2 {
+    font-size: 12px;
+  }
+  .afterRightside-nav {
+    transform: translateX(0%);
+  }
+}
+@media screen and (max-width: 800px) {
+  .RightSideNav {
+    margin-top: 104px;
+    background-color: #282828;
+  }
 }/*# sourceMappingURL=RightsideNav.css.map */

@@ -1,6 +1,7 @@
 .leftsidenav-main {
   background: rgb(33, 32, 30);
   width: 270px;
+  transition: 0.8s;
   padding: 24px 22px;
 }
 .leftsidenav-main .leftside-nav-fixed {
@@ -29,4 +30,25 @@
   margin: 30px 0px;
   margin-left: 10px;
   letter-spacing: 3px;
+}
+
+@media screen and (max-width: 990px) {
+  .leftsidenav-main {
+    background: rgb(33, 32, 30);
+    width: 220px;
+    transform: translateX(-100%);
+    padding: 24px 22px;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+  }
+  .leftside-navafter {
+    transform: translateX(0px);
+  }
+}
+@media screen and (max-width: 800px) {
+  .leftsidenav-main {
+    margin-top: 104px;
+    background-color: #282828;
+  }
 }/*# sourceMappingURL=LeftsideNav.css.map */

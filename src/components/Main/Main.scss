@@ -51,6 +51,10 @@ nav {
   position: relative;
   z-index: 1;
   width: 100%;
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  align-items: center;
   ul {
     display: flex;
     gap: 20px;
@@ -60,6 +64,20 @@ nav {
         text-decoration: none;
       }
     }
+  }
+  button {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    height: 40px;
+    width: 170px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 99999;
+  }
+  svg {
+    display: none;
   }
 }
 

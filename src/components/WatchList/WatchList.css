@@ -20,6 +20,10 @@
   margin-top: 20px;
 }
 .watchlist-main .allMovie .movie {
-  width: 40%;
+  width: 48%;
   height: 300px;
+}
+.watchlist-main h1 {
+  text-align: center;
+  margin: 20px 0px;
 }/*# sourceMappingURL=WatchList.css.map */

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Main.css";
+import "./MainQuery/mainquery.css";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 interface HeaderInterface {
   allMovie: Array<any>;
   watchList: Array<number>;
@@ -52,30 +54,10 @@ export default function Header(props: HeaderInterface) {
         </div>
       </div>
     ));
-  const nav = (
-    <nav>
-      <ul>
-        <li>
-          <Link to={"/"}>Movies</Link>
-        </li>
-        <li>
-          <Link to={"/"}>Sports</Link>
-        </li>
-        <li>
-          <Link to={"/"}>TV Series</Link>
-        </li>
-        <li>
-          <Link to={"/"}>Kids</Link>
-        </li>
-        <li>
-          <Link to={"/"}>More</Link>
-        </li>
-      </ul>
-    </nav>
-  );
+
   const header = (
     <header>
-      {nav}
+      <Navbar />
       <div className="header-background">
         <img
           className="blur"

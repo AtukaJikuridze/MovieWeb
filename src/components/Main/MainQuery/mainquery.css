@@ -1,0 +1,65 @@
+@media screen and (max-width: 1400px) {
+  nav button {
+    display: block;
+  }
+  nav .navdisabledlink {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .allMovie .movie {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 991px) {
+  header .header-text {
+    height: 100%;
+    margin-top: 0px !important;
+    padding: 0px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  header .header-text h1 {
+    text-align: center;
+  }
+  nav {
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    background-color: #282828;
+    z-index: 10;
+    gap: 15px;
+  }
+  nav svg {
+    display: block;
+    color: #fff;
+    font-size: 23px;
+  }
+  header .header-text {
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width: 740px) {
+  main input {
+    width: 80%;
+  }
+  main header .header-text h1 {
+    width: 100%;
+    font-size: 20px;
+    line-height: unset;
+  }
+  main header .header-text .flex p {
+    margin: 0px 10px 15px 10px;
+  }
+  main h1,
+  main input {
+    display: block;
+    text-align: center;
+    margin: 30px auto !important;
+  }
+  main .allMovie .movie {
+    width: 90%;
+  }
+}/*# sourceMappingURL=mainquery.css.map */

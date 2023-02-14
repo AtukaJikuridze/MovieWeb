@@ -7,10 +7,22 @@ interface LeftNavLinkInterface {
   onClick?: any;
 }
 export default function LeftNavLink(props: LeftNavLinkInterface) {
+  const closeNav = () => {
+    document
+      .querySelector(".leftsidenav-main")
+      ?.classList.remove("leftside-navafter");
+  };
   return (
     <div className="LeftNavLink">
       {<props.icon />}
-      <h3 onClick={props.onClick}>{props.title}</h3>
+      <h3
+        onClick={() => {
+          props.onClick();
+          closeNav();
+        }}
+      >
+        {props.title}
+      </h3>
     </div>
   );
 }

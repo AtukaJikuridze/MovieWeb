@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
-import "./mediaquery.css";
 import Main from "./components/Main/Main";
 import LeftsideNav from "./components/LeftsideNav/LeftsideNav";
 import RightsideNav from "./components/RightsideNav/RightsideNav";
