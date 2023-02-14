@@ -7,10 +7,11 @@ import LeftsideNav from "./components/LeftsideNav/LeftsideNav";
 import RightsideNav from "./components/RightsideNav/RightsideNav";
 import Movie from "./components/Movie/Movie";
 import { allMovieAPI } from "./AllMovie";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 function App() {
   const navigate = useNavigate();
   const [allMovie, setAllMovie] = useState([]);
-  const [continueWatching, setContinueWatchList] = useState([]);
+  const [watchHistory, setWatchHistory] = useState([]);
   const [watchList, setWatchList] = useState([]);
   useEffect(() => {
     setAllMovie(allMovieAPI.results);
@@ -25,6 +26,8 @@ function App() {
           path="/"
           element={
             <Main
+              watchHistory={watchHistory}
+              setWatchHistory={setWatchHistory}
               allMovie={allMovie}
               setWatchList={setWatchList}
               watchList={watchList}
@@ -33,14 +36,22 @@ function App() {
         />
         <Route
           path="movies/:id"
-          element={<Movie navigate={navigate} allMovies={allMovie} />}
+          element={
+            <Movie
+              setWatchHistory={setWatchHistory}
+              watchHistory={watchHistory}
+              navigate={navigate}
+              allMovies={allMovie}
+            />
+          }
         />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
 
       <RightsideNav
         allMovie={allMovie}
         watchList={watchList}
-        continueWatching={continueWatching}
+        watchHistory={watchHistory}
       />
     </div>
   );

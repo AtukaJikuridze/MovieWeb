@@ -126,6 +126,7 @@ nav ul li a {
   margin-bottom: 30px;
   position: relative;
   height: 250px;
+  animation: 2s movie;
 }
 .allMovie .movie img {
   width: 100%;
@@ -180,4 +181,13 @@ nav ul li a {
 }
 .allMovie .movie-text p {
   color: #7f7f7f;
+}
+
+@keyframes movie {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=Main.css.map */

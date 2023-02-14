@@ -5,9 +5,15 @@ interface SuggestMovies {
   allMovies: Array<any>;
   currentMovie: number;
   navigate: any;
+  setWatchHistory: any;
+  watchHistory: Array<number>;
 }
 
 export default function SuggestMovies(props: SuggestMovies) {
+  const watchSuggestMovie = (e: number) => {
+    props.navigate(`movies/${props.allMovies[e].id}`);
+    props.setWatchHistory([...props.watchHistory, props.allMovies[e].id]);
+  };
   const navigate = useNavigate();
   const randomMovie: Array<number> = [];
   for (let i = 0; i <= 3; i++) {
@@ -18,10 +24,7 @@ export default function SuggestMovies(props: SuggestMovies) {
       props.allMovies[randomNumber].id !== props.currentMovie
     ) {
       randomMovie.push(randomNumber);
-      console.log(true);
     } else {
-      console.log(false);
-
       i--;
     }
   }
@@ -35,11 +38,7 @@ export default function SuggestMovies(props: SuggestMovies) {
               src={`https://image.tmdb.org/t/p/w1280${props.allMovies[e].backdrop_path}`}
               alt=""
             />
-            <button
-              onClick={() => props.navigate(`movies/${props.allMovies[e].id}`)}
-            >
-              Watch Now !
-            </button>
+            <button onClick={() => watchSuggestMovie(e)}>Watch Now !</button>
           </div>
         </div>
       ))}

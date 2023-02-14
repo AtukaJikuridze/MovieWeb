@@ -18,6 +18,7 @@ export const allMovieAPI: any = {
       vote_average: 7.5,
       vote_count: 2963,
     },
+
     {
       adult: false,
       backdrop_path: "/tGwO4xcBjhXC0p5qlkw37TrH6S6.jpg",

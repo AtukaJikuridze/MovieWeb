@@ -7,6 +7,8 @@ import SuggestMovies from "./RandomMovie/SuggestMovies";
 interface MovieInterface {
   allMovies: Array<any>;
   navigate: any;
+  setWatchHistory: any;
+  watchHistory: Array<number>;
 }
 
 export default function Movie(props: MovieInterface) {
@@ -37,6 +39,8 @@ export default function Movie(props: MovieInterface) {
       <h1>Here is some suggest movies..</h1>
 
       <SuggestMovies
+        setWatchHistory={props.setWatchHistory}
+        watchHistory={props.watchHistory}
         navigate={props.navigate}
         currentMovie={info.id}
         allMovies={props.allMovies}

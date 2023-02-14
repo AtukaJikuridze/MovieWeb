@@ -5,6 +5,8 @@ interface HeaderInterface {
   allMovie: Array<any>;
   watchList: Array<number>;
   setWatchList: any;
+  watchHistory: Array<number>;
+  setWatchHistory: any;
 }
 export default function Header(props: HeaderInterface) {
   const [inputValue, setInputValue] = useState<string>("");
@@ -30,6 +32,7 @@ export default function Header(props: HeaderInterface) {
             <h2>{e.title}</h2>
             <button
               onClick={() => {
+                props.setWatchHistory([...props.watchHistory, e.id]);
                 navigate(`movies/${e.id}`);
               }}
             >
@@ -87,7 +90,7 @@ export default function Header(props: HeaderInterface) {
           <p>Adventure</p>
           <p>Fantasy</p>
         </div>
-        <button>Watch</button>
+        <button onClick={() => navigate("movies/436270")}>Wath</button>
       </div>
     </header>
   );
