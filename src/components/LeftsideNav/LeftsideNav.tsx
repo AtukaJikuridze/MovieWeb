@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import LeftNavLink from "./LeftNavLink";
 import { useNavigate } from "react-router-dom";
+import { allMovieAPI } from "../../AllMovie";
 import {
   BsSearch,
   BsClipboard,
@@ -9,19 +10,22 @@ import {
   BsNut,
 } from "react-icons/bs";
 import "./LeftsideNav.css";
-
-export default function LeftsideNav() {
+interface LeftsideNavInterface {}
+export default function LeftsideNav(props: LeftsideNavInterface) {
   const navigate = useNavigate();
   const search = (e: any) => {
     window.scrollTo(0, 500);
   };
+
   return (
     <div className="leftsidenav-main">
       <div className="leftside-nav-fixed">
         <div className="leftside-logo">
           <img
             style={{ cursor: "pointer" }}
-            onClick={() => navigate("/")}
+            onClick={() => {
+              navigate("/");
+            }}
             src={require("../../assets/images/Logo.png")}
             alt=""
           />
@@ -34,7 +38,11 @@ export default function LeftsideNav() {
           title="Search"
         />
 
-        <LeftNavLink icon={BsClipboard} title="Watchlist" />
+        <LeftNavLink
+          onClick={() => navigate("/watchlist")}
+          icon={BsClipboard}
+          title="Watchlist"
+        />
         <LeftNavLink icon={BsCalendarCheck} title="Coming soon" />
         <p className="leftside-category-name">SOCIAL</p>
         {/* <LeftNavLink icon={BsPeople} title="Friends" /> */}

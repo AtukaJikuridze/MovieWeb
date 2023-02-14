@@ -1,0 +1,25 @@
+.watchlist-main {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  /* width */
+  background-color: #242424;
+  padding: 40px 0px;
+}
+.watchlist-main::-webkit-scrollbar {
+  width: 0px;
+}
+.watchlist-main .empty-watchlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+.watchlist-main .empty-watchlist a {
+  margin-top: 20px;
+}
+.watchlist-main .allMovie .movie {
+  width: 40%;
+  height: 300px;
+}/*# sourceMappingURL=WatchList.css.map */

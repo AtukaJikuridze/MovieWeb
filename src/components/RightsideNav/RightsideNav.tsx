@@ -37,9 +37,10 @@ export default function RightsideNav(props: RightSideNavInterface) {
       let new_movie = props.allMovie.find((x) => x.id === props.watchList[i]);
       mv_list.unshift(new_movie);
     }
-    return mv_list.map((e) => (
+    return mv_list.map((e, i) => (
       <>
         <RightsideCard
+          key={i}
           movieImg={` https://image.tmdb.org/t/p/w1280${e.backdrop_path}`}
           title={e.title}
           genre={e.release_date}
@@ -56,11 +57,16 @@ export default function RightsideNav(props: RightSideNavInterface) {
       );
       if (!mv_list.includes(new_movie)) {
         mv_list.unshift(new_movie);
+      } else {
+        let filtered = mv_list.filter((e) => e !== new_movie);
+        mv_list = filtered;
+        mv_list.unshift(new_movie);
       }
     }
-    return mv_list.map((e) => (
+    return mv_list.map((e, i) => (
       <>
         <RightsideCard
+          key={i}
           movieImg={` https://image.tmdb.org/t/p/w1280${e.backdrop_path}`}
           title={e.title}
           genre={e.release_date}

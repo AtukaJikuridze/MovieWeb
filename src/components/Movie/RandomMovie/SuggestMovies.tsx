@@ -31,8 +31,8 @@ export default function SuggestMovies(props: SuggestMovies) {
 
   return (
     <div className="suggest-movies">
-      {randomMovie.map((e) => (
-        <div className="suggest-movie">
+      {randomMovie.map((e, i) => (
+        <div className="suggest-movie" key={i}>
           <div className="suggest-img">
             <img
               src={`https://image.tmdb.org/t/p/w1280${props.allMovies[e].backdrop_path}`}

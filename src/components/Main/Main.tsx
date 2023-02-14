@@ -21,8 +21,8 @@ export default function Header(props: HeaderInterface) {
   }
   const allMovieMap = props.allMovie
     .filter((f) => f.title.toLowerCase().includes(inputValue.toLowerCase()))
-    .map((e) => (
-      <div className="movie">
+    .map((e, i) => (
+      <div className="movie" key={i}>
         <img
           src={`https://image.tmdb.org/t/p/w1280${e.backdrop_path}`}
           alt=""
@@ -90,7 +90,14 @@ export default function Header(props: HeaderInterface) {
           <p>Adventure</p>
           <p>Fantasy</p>
         </div>
-        <button onClick={() => navigate("movies/436270")}>Wath</button>
+        <button
+          onClick={() => {
+            navigate("movies/436270");
+            props.setWatchHistory([...props.watchHistory, 436270]);
+          }}
+        >
+          Wath
+        </button>
       </div>
     </header>
   );
