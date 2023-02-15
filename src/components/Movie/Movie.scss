@@ -72,13 +72,27 @@
     }
     .movie-main {
       padding: 150px 40px 40px 40px;
-      .video-main {
-        height: 240px;
-      }
     }
   }
 }
 @media screen and (max-width: 590px) {
+  .movie-main {
+    .video-main {
+      position: relative;
+      height: 300px;
+
+      video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .movie-img {
+    img {
+      height: 230px !important;
+    }
+  }
   .movie-info {
     flex-direction: column;
     align-items: center;
@@ -96,6 +110,28 @@
     .suggest-movie {
       width: 100% !important;
       margin: auto;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .watchlist-main {
+    padding-top: 120px !important;
+  }
+}
+
+@media screen and (max-width: 771px) {
+  .watchlist-main {
+    .movie {
+      width: 100% !important;
+      height: 430px !important;
+    }
+  }
+}
+@media screen and (max-width: 590px) {
+  .watchlist-main {
+    .movie {
+      width: 90% !important;
+      height: 280px !important;
     }
   }
 }

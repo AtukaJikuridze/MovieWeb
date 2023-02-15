@@ -171,6 +171,9 @@ nav svg {
   opacity: 1;
   left: 0px;
 }
+.allMovie .movie:hover .movie-info button {
+  display: block;
+}
 .allMovie .movie-text button {
   width: 100%;
   height: 30px;

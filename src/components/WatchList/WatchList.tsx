@@ -2,6 +2,7 @@ import React from "react";
 import "./WatchList.css";
 import "../Main/Main.css";
 import { Link } from "react-router-dom";
+import Navbar from "../Main/Navbar";
 interface WatchListInterface {
   watchList: Array<number>;
   allMovie: Array<any>;
@@ -61,20 +62,23 @@ export default function WatchList(props: WatchListInterface) {
     );
   };
   return (
-    <div className="watchlist-main">
-      {props.watchList.length === 0 ? (
-        <div className="empty-watchlist">
-          <h1 className="nowatchlist">Watch list is empty</h1>
-          <Link to={"/"}>Back To Home Page..</Link>
-        </div>
-      ) : (
-        <>
-          <div className="watchlist-text">
-            <h1>WatchList: </h1>
+    <>
+      <div className="watchlist-main">
+        <Navbar />
+        {props.watchList.length === 0 ? (
+          <div className="empty-watchlist">
+            <h1 className="nowatchlist">Watch list is empty</h1>
+            <Link to={"/"}>Back To Home Page..</Link>
           </div>
-          <div className="allMovie">{watchListMap()}</div>
-        </>
-      )}
-    </div>
+        ) : (
+          <>
+            <div className="watchlist-text">
+              <h1>WatchList: </h1>
+            </div>
+            <div className="allMovie">{watchListMap()}</div>
+          </>
+        )}
+      </div>
+    </>
   );
 }

@@ -32,21 +32,24 @@ export default function Header(props: HeaderInterface) {
         <div className="movie-info">
           <div className="movie-text">
             <h2>{e.title}</h2>
-            <button
-              onClick={() => {
-                props.setWatchHistory([...props.watchHistory, e.id]);
-                navigate(`movies/${e.id}`);
-              }}
-            >
-              Watch Now
-            </button>
-            <button onClick={() => AddWatchList(e.id)}>
-              {props.watchList.includes(e.id) ? (
-                <p>Remove From Watchlist</p>
-              ) : (
-                <p>Add To Watchlist</p>
-              )}
-            </button>
+            <div className="movie-buttons">
+              <button
+                onClick={() => {
+                  props.setWatchHistory([...props.watchHistory, e.id]);
+                  navigate(`movies/${e.id}`);
+                  window.scrollTo(0, 0);
+                }}
+              >
+                Watch Now
+              </button>
+              <button onClick={() => AddWatchList(e.id)}>
+                {props.watchList.includes(e.id) ? (
+                  <p>Remove From Watchlist</p>
+                ) : (
+                  <p>Add To Watchlist</p>
+                )}
+              </button>
+            </div>
             <h2>Rating : {e.vote_average}</h2>
             <h2>Release date : {e.release_date}</h2>
             <p>Description {e.overview}</p>

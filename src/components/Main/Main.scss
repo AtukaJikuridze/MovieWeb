@@ -172,7 +172,11 @@ nav {
   .movie:hover {
     .movie-info {
       opacity: 1;
+
       left: 0px;
+      button {
+        display: block;
+      }
     }
   }
 
@@ -186,6 +190,7 @@ nav {
       outline: none;
       cursor: pointer;
       margin-bottom: 10px;
+
       p {
         color: #fff;
       }

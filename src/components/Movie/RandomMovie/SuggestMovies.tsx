@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import "./SuggestMovies.css";
 interface SuggestMovies {
   allMovies: Array<any>;
@@ -11,10 +11,11 @@ interface SuggestMovies {
 
 export default function SuggestMovies(props: SuggestMovies) {
   const watchSuggestMovie = (e: number) => {
+    window.scrollTo(0, 0);
     props.navigate(`movies/${props.allMovies[e].id}`);
     props.setWatchHistory([...props.watchHistory, props.allMovies[e].id]);
   };
-  const navigate = useNavigate();
+
   const randomMovie: Array<number> = [];
   for (let i = 0; i <= 3; i++) {
     let randomNumber = Math.floor(Math.random() * 20);

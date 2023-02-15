@@ -42,6 +42,7 @@
     background-color: #282828;
     z-index: 10;
     gap: 15px;
+    top: 0px;
     svg {
       display: block;
       color: #fff;
@@ -51,6 +52,13 @@
   header {
     .header-text {
       margin-top: 150px;
+    }
+  }
+  .allMovie {
+    .movie-info {
+      button {
+        display: none;
+      }
     }
   }
 }

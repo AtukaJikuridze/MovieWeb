@@ -25,6 +25,10 @@ export default function LeftsideNav(props: LeftsideNavInterface) {
             style={{ cursor: "pointer" }}
             onClick={() => {
               navigate("/");
+              document
+                .querySelector(".leftsidenav-main")
+                ?.classList.remove("leftside-navafter");
+              window.scrollTo(0, 0);
             }}
             src={require("../../assets/images/Logo.png")}
             alt=""
