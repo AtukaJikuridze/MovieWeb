@@ -41,8 +41,12 @@
   header .header-text {
     margin-top: 150px;
   }
-  .allMovie .movie-info button {
-    display: none;
+  .allMovie .movie-info .movie-buttons {
+    transform: translateX(499px);
+    transition: 0.1s;
+  }
+  .allMovie .movie:hover .movie-buttons {
+    transform: translateY(0px) !important;
   }
 }
 @media screen and (max-width: 740px) {

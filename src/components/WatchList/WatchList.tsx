@@ -68,7 +68,7 @@ export default function WatchList(props: WatchListInterface) {
         {props.watchList.length === 0 ? (
           <div className="empty-watchlist">
             <h1 className="nowatchlist">Watch list is empty</h1>
-            <Link to={"/"}>Back To Home Page..</Link>
+            <Link to={"/MovieWeb"}>Back To Home Page..</Link>
           </div>
         ) : (
           <>

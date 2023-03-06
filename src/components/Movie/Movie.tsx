@@ -7,7 +7,6 @@ import Navbar from "../Main/Navbar";
 
 interface MovieInterface {
   allMovies: Array<any>;
-  navigate: any;
   setWatchHistory: any;
   watchHistory: Array<number>;
 }
@@ -16,6 +15,7 @@ export default function Movie(props: MovieInterface) {
   const params = useParams();
   const correctMovie = MovieID.find((e) => e.id === Number(params.id));
   const movieInfo = props.allMovies.filter((e) => e.id === Number(params.id));
+
   const info = movieInfo[0];
   return (
     <div className="movie-page">
@@ -27,16 +27,16 @@ export default function Movie(props: MovieInterface) {
         <div className="movie-info">
           <div className="movie-img">
             <img
-              src={`https://image.tmdb.org/t/p/w1280${info.backdrop_path}`}
+              src={`https://image.tmdb.org/t/p/w1280${info?.backdrop_path}`}
               alt=""
             />
           </div>
           <div>
-            <h2>{info.title}</h2>
-            <p>{info.overview}</p>
-            <h4>IMDB: {info.vote_average}</h4>
-            <h4>Original Language : {info.original_language}</h4>
-            <p>ReleaseDate: {info.release_date}</p>
+            <h2>{info?.title}</h2>
+            <p>{info?.overview}</p>
+            <h4>IMDB: {info?.vote_average}</h4>
+            <h4>Original Language : {info?.original_language}</h4>
+            <p>ReleaseDate: {info?.release_date}</p>
           </div>
         </div>
         <h1>Here is some suggest movies..</h1>
@@ -44,8 +44,7 @@ export default function Movie(props: MovieInterface) {
         <SuggestMovies
           setWatchHistory={props.setWatchHistory}
           watchHistory={props.watchHistory}
-          navigate={props.navigate}
-          currentMovie={info.id}
+          currentMovie={info?.id}
           allMovies={props.allMovies}
         />
       </div>

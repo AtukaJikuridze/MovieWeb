@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LeftNavLink from "./LeftNavLink";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { allMovieAPI } from "../../AllMovie";
 import {
   BsSearch,
@@ -10,26 +10,28 @@ import {
   BsNut,
 } from "react-icons/bs";
 import "./LeftsideNav.css";
-interface LeftsideNavInterface {}
-export default function LeftsideNav(props: LeftsideNavInterface) {
-  const navigate = useNavigate();
-  const search = (e: any) => {
-    window.scrollTo(0, 500);
-  };
 
+export default function LeftsideNav() {
+  const navigate = useNavigate();
+  const params = useParams();
+  const search = (e: any) => {
+    navigate("/MovieWeb");
+    window.scrollTo(0, 570);
+  };
+  const logoToHomepage = () => {
+    navigate("/MovieWeb");
+
+    document
+      .querySelector(".leftsidenav-main")
+      ?.classList.remove("leftside-navafter");
+  };
   return (
     <div className="leftsidenav-main">
       <div className="leftside-nav-fixed">
         <div className="leftside-logo">
           <img
             style={{ cursor: "pointer" }}
-            onClick={() => {
-              navigate("/");
-              document
-                .querySelector(".leftsidenav-main")
-                ?.classList.remove("leftside-navafter");
-              window.scrollTo(0, 0);
-            }}
+            onClick={logoToHomepage}
             src={require("../../assets/images/Logo.png")}
             alt=""
           />
@@ -43,7 +45,7 @@ export default function LeftsideNav(props: LeftsideNavInterface) {
         />
 
         <LeftNavLink
-          onClick={() => navigate("/watchlist")}
+          onClick={() => navigate("MovieWeb/watchlist")}
           icon={BsClipboard}
           title="Watchlist"
         />

@@ -22,43 +22,43 @@ function App() {
       <LeftsideNav />
 
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Main
-              watchHistory={watchHistory}
-              setWatchHistory={setWatchHistory}
-              allMovie={allMovie}
-              setWatchList={setWatchList}
-              watchList={watchList}
-            />
-          }
-        />
-        <Route
-          path="movies/:id"
-          element={
-            <Movie
-              setWatchHistory={setWatchHistory}
-              watchHistory={watchHistory}
-              navigate={navigate}
-              allMovies={allMovie}
-            />
-          }
-        />
-        <Route
-          path="watchlist"
-          element={
-            <WatchList
-              navigate={navigate}
-              setWatchList={setWatchList}
-              setWatchHistory={setWatchHistory}
-              watchHistory={watchHistory}
-              allMovie={allMovie}
-              watchList={watchList}
-            />
-          }
-        />
-
+        <Route path="/MovieWeb">
+          <Route
+            index
+            element={
+              <Main
+                watchHistory={watchHistory}
+                setWatchHistory={setWatchHistory}
+                allMovie={allMovie}
+                setWatchList={setWatchList}
+                watchList={watchList}
+              />
+            }
+          />
+          <Route
+            path="movies/:id"
+            element={
+              <Movie
+                setWatchHistory={setWatchHistory}
+                watchHistory={watchHistory}
+                allMovies={allMovie}
+              />
+            }
+          />
+          <Route
+            path="/MovieWeb/watchlist"
+            element={
+              <WatchList
+                navigate={navigate}
+                setWatchList={setWatchList}
+                setWatchHistory={setWatchHistory}
+                watchHistory={watchHistory}
+                allMovie={allMovie}
+                watchList={watchList}
+              />
+            }
+          />
+        </Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
 

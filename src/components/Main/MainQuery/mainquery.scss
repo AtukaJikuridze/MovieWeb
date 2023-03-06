@@ -56,8 +56,14 @@
   }
   .allMovie {
     .movie-info {
-      button {
-        display: none;
+      .movie-buttons {
+        transform: translateX(499px);
+        transition: 0.1s;
+      }
+    }
+    .movie:hover {
+      .movie-buttons {
+        transform: translateY(0px) !important;
       }
     }
   }

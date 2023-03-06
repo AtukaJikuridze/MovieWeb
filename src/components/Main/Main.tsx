@@ -29,19 +29,22 @@ export default function Header(props: HeaderInterface) {
           src={`https://image.tmdb.org/t/p/w1280${e.backdrop_path}`}
           alt=""
         />
+
         <div className="movie-info">
           <div className="movie-text">
             <h2>{e.title}</h2>
             <div className="movie-buttons">
-              <button
-                onClick={() => {
-                  props.setWatchHistory([...props.watchHistory, e.id]);
-                  navigate(`movies/${e.id}`);
-                  window.scrollTo(0, 0);
-                }}
-              >
-                Watch Now
-              </button>
+              <Link to={`/MovieWeb/movies/${e.id}`}>
+                <button
+                  onClick={() => {
+                    props.setWatchHistory([...props.watchHistory, e.id]);
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  Watch Now
+                </button>
+              </Link>
+
               <button onClick={() => AddWatchList(e.id)}>
                 {props.watchList.includes(e.id) ? (
                   <p>Remove From Watchlist</p>

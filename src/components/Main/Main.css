@@ -154,6 +154,9 @@ nav svg {
   top: 0px;
 }
 
+.allMovie a {
+  text-decoration: none;
+}
 .allMovie .movie-info {
   opacity: 0;
   border-radius: 5px;
@@ -170,9 +173,6 @@ nav svg {
 .allMovie .movie:hover .movie-info {
   opacity: 1;
   left: 0px;
-}
-.allMovie .movie:hover .movie-info button {
-  display: block;
 }
 .allMovie .movie-text button {
   width: 100%;

@@ -5,7 +5,7 @@ export default function PageNotFound() {
   return (
     <div className="notfound-main">
       <h1>Page Not Found...</h1>
-      <Link to={"/"}>Back to homepage</Link>
+      <Link to={"/MovieWeb"}>Back to homepage</Link>
     </div>
   );
 }
