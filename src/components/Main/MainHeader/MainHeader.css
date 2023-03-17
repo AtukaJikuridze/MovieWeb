@@ -1,0 +1,56 @@
+header {
+  width: 100%;
+  background-image: url("../../../assets/images/Adam.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 720px;
+  position: relative;
+  overflow-y: hidden;
+}
+header .blur {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+header .blur2 {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  background: transparent;
+  padding: 32px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
+  list-style-type: none;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav button {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  height: 40px;
+  width: 170px;
+  cursor: pointer;
+  display: none;
+  position: relative;
+  z-index: 99999;
+}
+nav svg {
+  display: none;
+}/*# sourceMappingURL=MainHeader.css.map */

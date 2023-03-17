@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Main.css";
 import "./MainQuery/mainquery.css";
-import { Link, useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+import MainHeader from "./MainHeader/MainHeader";
 interface HeaderInterface {
   allMovie: Array<any>;
   watchList: Array<number>;
@@ -12,7 +12,6 @@ interface HeaderInterface {
 }
 export default function Header(props: HeaderInterface) {
   const [inputValue, setInputValue] = useState<string>("");
-  const navigate = useNavigate();
   function AddWatchList(e: number) {
     console.log(props.watchList);
     if (!props.watchList.includes(e)) {
@@ -61,37 +60,12 @@ export default function Header(props: HeaderInterface) {
       </div>
     ));
 
-  const header = (
-    <header>
-      <Navbar />
-      <div className="header-background">
-        <img
-          className="blur"
-          src={require("../../assets/images/Blur.png")}
-          alt=""
-        />{" "}
-      </div>
-      <div className="header-text">
-        <h1>Black Adam in the Multiverse of Madness</h1>
-        <div className="flex">
-          <p>Action</p>
-          <p>Adventure</p>
-          <p>Fantasy</p>
-        </div>
-        <button
-          onClick={() => {
-            navigate("movies/436270");
-            props.setWatchHistory([...props.watchHistory, 436270]);
-          }}
-        >
-          Wath
-        </button>
-      </div>
-    </header>
-  );
   return (
     <main>
-      {header}
+      <MainHeader
+        watchHistory={props.watchHistory}
+        setWatchHistory={props.setWatchHistory}
+      />
       <h1 style={{ margin: "100px 30px" }}>Search Movies :</h1>
       <input
         type="text"

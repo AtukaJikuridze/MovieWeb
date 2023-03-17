@@ -1,0 +1,56 @@
+header {
+  width: 100%;
+  background-image: url("../../../assets/images/Adam.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 720px;
+  position: relative;
+  overflow-y: hidden;
+
+  .blur {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+  .blur2 {
+    width: 100%;
+    height: 100%;
+  }
+}
+nav {
+  background: transparent;
+  padding: 32px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  align-items: center;
+  ul {
+    display: flex;
+    gap: 20px;
+    li {
+      list-style-type: none;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  button {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    height: 40px;
+    width: 170px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    z-index: 99999;
+  }
+  svg {
+    display: none;
+  }
+}
